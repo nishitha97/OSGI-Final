@@ -1,24 +1,26 @@
-package lengthpublisher;
+package timepublisher;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 
 
+
 public class Activator implements BundleActivator {
 
 	ServiceRegistration serviceRegistration;
+
+	
 
 	/*
 	 * (non-Javadoc)
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
+
+		System.out.println("Time Convert Manager start");
 		
-		System.out.println("Publisher start");
-		
-		serviceRegistration = bundleContext.registerService(LengthConvertManager.class.getName(), LengthConvertManager.getInstance(), null);
-		
+		serviceRegistration = bundleContext.registerService(TimeConvertManager.class.getName(), TimeConvertManager.getInstance(), null);
 	}
 
 	/*
@@ -27,6 +29,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void stop(BundleContext bundleContext) throws Exception {
 		serviceRegistration.unregister();
+		System.out.println("Time Convert Manager stop");
 	}
 
 }
