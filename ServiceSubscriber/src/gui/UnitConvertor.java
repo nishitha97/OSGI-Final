@@ -5,10 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import conversionlengthpublisher.ConversionLengthPublish;
-import conversiontemperaturepublisher.ConversionTemperaturePublish;
-import conversionweightpublisher.ConversionWeightPublish;
 import lengthpublisher.LengthConvertManager;
+import timepublisher.TimeConvertManager;
+import weightpublisher.WeightConvertManager;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -23,11 +22,15 @@ public class UnitConvertor {
 	private JTextField txtInput;
 	
 	private LengthConvertManager lengthConvertManager;
+	private TimeConvertManager timeConvertManager;
+	private WeightConvertManager weightConvert;
 
 	
-	public UnitConvertor(LengthConvertManager lengthConvertManager){
+	public UnitConvertor(LengthConvertManager lengthConvertManager,TimeConvertManager timeConvertManager,WeightConvertManager weightConvert){
 		
 		this.lengthConvertManager=lengthConvertManager;
+		this.timeConvertManager=timeConvertManager;
+		this.weightConvert=weightConvert;
 		initialize();
 	}
 

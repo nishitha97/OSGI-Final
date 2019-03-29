@@ -15,7 +15,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		
-		System.out.println("Publisher start");
+		System.out.println("Length Convert Manager start");
 		
 		serviceRegistration = bundleContext.registerService(LengthConvertManager.class.getName(), LengthConvertManager.getInstance(), null);
 		
@@ -27,6 +27,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void stop(BundleContext bundleContext) throws Exception {
 		serviceRegistration.unregister();
+		System.out.println("Length Convert Manager stop");
 	}
 
 }

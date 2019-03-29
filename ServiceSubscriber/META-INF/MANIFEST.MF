@@ -5,9 +5,8 @@ Bundle-SymbolicName: ServiceSubscriber
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: servicesubscriber.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: conversionlengthpublisher,
- conversiontemperaturepublisher,
- conversionweightpublisher,
- lengthpublisher,
+Import-Package: lengthpublisher,
+ timepublisher,
+ weightpublisher,
  org.osgi.framework;version="1.3.0"
 Bundle-ActivationPolicy: lazy

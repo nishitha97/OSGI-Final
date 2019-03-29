@@ -2,21 +2,22 @@ package weightpublisher;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
 
 public class Activator implements BundleActivator {
 
-	private static BundleContext context;
+	ServiceRegistration serviceRegistration;
 
-	static BundleContext getContext() {
-		return context;
-	}
 
 	/*
 	 * (non-Javadoc)
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
-		Activator.context = bundleContext;
+        
+		System.out.println("Weight Convert Manager start");
+		
+		serviceRegistration = bundleContext.registerService(WeightConvertManager.class.getName(), WeightConvertManager.getInstance(), null);
 	}
 
 	/*
@@ -24,7 +25,8 @@ public class Activator implements BundleActivator {
 	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
 	 */
 	public void stop(BundleContext bundleContext) throws Exception {
-		Activator.context = null;
+		serviceRegistration.unregister();
+		System.out.println("Weight Convert Manager stop");
 	}
 
 }
