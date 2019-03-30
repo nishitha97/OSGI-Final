@@ -43,30 +43,30 @@ public class WeightGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 719, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("WEIGHT CONVERSION");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 29));
-		lblNewLabel.setBounds(50, 25, 348, 35);
+		lblNewLabel.setBounds(205, 23, 348, 35);
 		frame.getContentPane().add(lblNewLabel);
 		
 		txtFromValue = new JTextField();
-		txtFromValue.setBounds(12, 86, 116, 22);
+		txtFromValue.setBounds(12, 86, 208, 22);
 		frame.getContentPane().add(txtFromValue);
 		txtFromValue.setColumns(10);
 		
 
-		cmbFrom.setBounds(140, 86, 145, 22);
+		cmbFrom.setBounds(305, 83, 145, 22);
 		frame.getContentPane().add(cmbFrom);
 		
-		lblToValue = new JLabel("New label");
-		lblToValue.setBounds(31, 137, 56, 16);
+		lblToValue = new JLabel("Result");
+		lblToValue.setBounds(12, 137, 208, 16);
 		frame.getContentPane().add(lblToValue);
 		
 		
-		cmbTo.setBounds(140, 134, 145, 22);
+		cmbTo.setBounds(305, 131, 145, 22);
 		frame.getContentPane().add(cmbTo);
 		
 		JButton btnConvert = new JButton("Convert");
@@ -75,7 +75,7 @@ public class WeightGUI {
 				convertButtonPressed();
 			}
 		});
-		btnConvert.setBounds(301, 85, 97, 71);
+		btnConvert.setBounds(505, 82, 97, 71);
 		frame.getContentPane().add(btnConvert);
 		setValuesToCmboBoxes();
 		

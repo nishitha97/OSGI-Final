@@ -45,16 +45,16 @@ public class LengthGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 783, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		cmbTo = new JComboBox<gui.ComboItem>();
-		cmbTo.setBounds(150, 149, 145, 22);
+		cmbTo.setBounds(356, 149, 174, 22);
 		frame.getContentPane().add(cmbTo);
 		
 		cmbFrom = new JComboBox<gui.ComboItem>();
-		cmbFrom.setBounds(150, 101, 145, 22);
+		cmbFrom.setBounds(356, 101, 174, 22);
 		frame.getContentPane().add(cmbFrom);
 		
 		JButton btnConvert = new JButton("Convert");
@@ -63,16 +63,16 @@ public class LengthGUI {
 				convertButtonPressed();
 			}
 		});
-		btnConvert.setBounds(311, 100, 97, 71);
+		btnConvert.setBounds(630, 100, 97, 71);
 		frame.getContentPane().add(btnConvert);
 		
 		txtFromValue = new JTextField();
 		txtFromValue.setColumns(10);
-		txtFromValue.setBounds(22, 101, 116, 22);
+		txtFromValue.setBounds(22, 101, 260, 22);
 		frame.getContentPane().add(txtFromValue);
 		
-		lblToValue = new JLabel("New label");
-		lblToValue.setBounds(41, 152, 56, 16);
+		lblToValue = new JLabel("Result");
+		lblToValue.setBounds(22, 152, 260, 16);
 		frame.getContentPane().add(lblToValue);
 		
 		JLabel lblLengthConversion = new JLabel("LENGTH CONVERSION");

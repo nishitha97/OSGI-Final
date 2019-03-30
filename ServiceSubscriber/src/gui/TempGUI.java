@@ -45,12 +45,12 @@ public class TempGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 484, 303);
+		frame.setBounds(100, 100, 688, 303);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		cmbFrom = new JComboBox<gui.ComboItem>();
-		cmbFrom.setBounds(162, 111, 145, 22);
+		cmbFrom.setBounds(331, 111, 145, 22);
 		frame.getContentPane().add(cmbFrom);
 		
 		btnConvert = new JButton("Convert");
@@ -60,25 +60,25 @@ public class TempGUI {
 			}
 		
 		});
-		btnConvert.setBounds(323, 110, 97, 71);
+		btnConvert.setBounds(523, 111, 97, 71);
 		frame.getContentPane().add(btnConvert);
 		
 		cmbTo = new JComboBox<gui.ComboItem>();
-		cmbTo.setBounds(162, 159, 145, 22);
+		cmbTo.setBounds(331, 160, 145, 22);
 		frame.getContentPane().add(cmbTo);
 		
 		txtFromVal = new JTextField();
 		txtFromVal.setColumns(10);
-		txtFromVal.setBounds(34, 111, 116, 22);
+		txtFromVal.setBounds(34, 111, 231, 22);
 		frame.getContentPane().add(txtFromVal);
 		
-		lblToVal = new JLabel("New label");
-		lblToVal.setBounds(53, 162, 56, 16);
+		lblToVal = new JLabel("Result");
+		lblToVal.setBounds(34, 162, 231, 16);
 		frame.getContentPane().add(lblToVal);
 		
 		JLabel lblTempratureConversion = new JLabel("TEMPERATURE CONVERSION");
 		lblTempratureConversion.setFont(new Font("Tahoma", Font.PLAIN, 29));
-		lblTempratureConversion.setBounds(49, 39, 382, 35);
+		lblTempratureConversion.setBounds(178, 27, 382, 35);
 		frame.getContentPane().add(lblTempratureConversion);
 		setValuesToCmboBoxes();
 	}

@@ -68,7 +68,7 @@ public class MainMenu {
 		btnWeight.setBounds(48, 124, 193, 48);
 		frame.getContentPane().add(btnWeight);
 		
-		JButton btnTime = new JButton("Time");
+		JButton btnTime = new JButton("TIME");
 		btnTime.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TimeGui time = new TimeGui(timeConvertManager);
@@ -78,7 +78,7 @@ public class MainMenu {
 		btnTime.setBounds(48, 202, 193, 48);
 		frame.getContentPane().add(btnTime);
 		
-		JButton btnLength = new JButton("Length");
+		JButton btnLength = new JButton("LENGTH");
 		btnLength.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				LengthGUI length = new LengthGUI(lengthConvertManager);
@@ -88,7 +88,7 @@ public class MainMenu {
 		btnLength.setBounds(315, 124, 193, 48);
 		frame.getContentPane().add(btnLength);
 		
-		JButton btnTemperature = new JButton("Temperature");
+		JButton btnTemperature = new JButton("TEMPERATURE");
 		btnTemperature.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TempGUI temp = new TempGUI(temperatureConvert);

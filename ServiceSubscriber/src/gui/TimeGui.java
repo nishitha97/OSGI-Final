@@ -69,7 +69,7 @@ public class TimeGui {
 		txtFromValue.setBounds(12, 103, 246, 22);
 		frame.getContentPane().add(txtFromValue);
 		
-		lblToValue = new JLabel("New label");
+		lblToValue = new JLabel("Result");
 		lblToValue.setBounds(12, 154, 300, 22);
 		frame.getContentPane().add(lblToValue);
 		
