@@ -88,9 +88,15 @@ public class MainMenu {
 		btnLength.setBounds(315, 124, 193, 48);
 		frame.getContentPane().add(btnLength);
 		
-		JButton button_2 = new JButton("New button");
-		button_2.setBounds(315, 202, 193, 48);
-		frame.getContentPane().add(button_2);
+		JButton btnTemperature = new JButton("Temperature");
+		btnTemperature.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TempGUI temp = new TempGUI(temperatureConvert);
+				temp.frame.setVisible(true);
+			}
+		});
+		btnTemperature.setBounds(315, 202, 193, 48);
+		frame.getContentPane().add(btnTemperature);
 	}
 
 }
