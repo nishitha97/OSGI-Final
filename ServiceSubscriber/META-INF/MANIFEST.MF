@@ -6,7 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: servicesubscriber.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: lengthpublisher,
+ org.osgi.framework;version="1.3.0",
+ temperaturepublisher,
  timepublisher,
- weightpublisher,
- org.osgi.framework;version="1.3.0"
+ weightpublisher
 Bundle-ActivationPolicy: lazy

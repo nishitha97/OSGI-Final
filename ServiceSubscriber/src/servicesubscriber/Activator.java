@@ -14,49 +14,42 @@ import lengthpublisher.LengthConvertManager;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
+import temperaturepublisher.TemperatureConvertManager;
 import timepublisher.TimeConvertManager;
 import weightpublisher.WeightConvertManager;
 import gui.UnitConvertor;
 
 public class Activator implements BundleActivator {
-	
-	
+
 	ServiceReference lengthserviceReference;
 	ServiceReference timeserviceReference;
 	ServiceReference weightserviceReference;
-	
+	ServiceReference temperatureserviceReference;
 
 	public void start(BundleContext bundleContext) throws Exception {
 		try {
 			System.out.println("Start Subsciber start");
-			
+
 			lengthserviceReference = bundleContext.getServiceReference(LengthConvertManager.class.getName());
 			LengthConvertManager lenghtConvert = (LengthConvertManager) bundleContext.getService(lengthserviceReference);
-			
+
 			timeserviceReference = bundleContext.getServiceReference(TimeConvertManager.class.getName());
-			TimeConvertManager timeConvert  = (TimeConvertManager) bundleContext.getService(timeserviceReference);
-			
+			TimeConvertManager timeConvert = (TimeConvertManager) bundleContext.getService(timeserviceReference);
+
 			weightserviceReference = bundleContext.getServiceReference(WeightConvertManager.class.getName());
-			WeightConvertManager weightConvert  = (WeightConvertManager) bundleContext.getService(weightserviceReference);
-			
-			//System.out.println("sssssssssssssssssssssssssssssssssssss"+lengthServiceReference);
-			//System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaa"+weightServiceReference);
-			//System.out.println(tempServiceReference);
-			
-			UnitConvertor window = new UnitConvertor(lenghtConvert,timeConvert,weightConvert);
-		    window.frame.setVisible(true);
-			
-			//UnitConvertor window = new UnitConvertor(conversionweightpublish);
-			//window.frame.setVisible(true);
-			
+			WeightConvertManager weightConvert = (WeightConvertManager) bundleContext.getService(weightserviceReference);
+
+			temperatureserviceReference = bundleContext.getServiceReference(TemperatureConvertManager.class.getName());
+			TemperatureConvertManager temperatureConvert = (TemperatureConvertManager) bundleContext.getService(temperatureserviceReference);
+
+			UnitConvertor window = new UnitConvertor(lenghtConvert, timeConvert, weightConvert, temperatureConvert);
+			window.frame.setVisible(true);
+
 		} catch (Exception e) {
 
 		}
 
 	}
-
-
-
 
 	/*
 	 * (non-Javadoc)
@@ -64,17 +57,14 @@ public class Activator implements BundleActivator {
 	 * @see
 	 * org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
 	 */
-	
-	
-
 
 	public void stop(BundleContext bundleContext) throws Exception {
 		System.out.println("Good Bye !!!");
 		bundleContext.ungetService(lengthserviceReference);
 		bundleContext.ungetService(timeserviceReference);
 		bundleContext.ungetService(weightserviceReference);
+		bundleContext.ungetService(temperatureserviceReference);
 
 	}
-
 
 }
