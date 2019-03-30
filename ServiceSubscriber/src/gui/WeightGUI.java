@@ -85,9 +85,13 @@ public class WeightGUI {
 		
 		String toUnit = ((ComboItem)cmbTo.getSelectedItem()).getValue();
 		String FromUnit = ((ComboItem)cmbFrom.getSelectedItem()).getValue();
-		
+		try {
 		Double result =  weightConvert.getResult(FromUnit, toUnit, Double.parseDouble(txtFromValue.getText()));
 		lblToValue.setText(result.toString());
+		}catch(NumberFormatException e) {
+			lblToValue.setText("Please enter a valid number !");
+		}
+	
 	
 	}
 	

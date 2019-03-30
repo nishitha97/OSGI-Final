@@ -19,7 +19,6 @@ import timepublisher.TimeConvertManager;
 import weightpublisher.WeightConvertManager;
 import gui.MainMenu;
 
-import gui.UnitConvertor;
 
 public class Activator implements BundleActivator {
 
@@ -43,10 +42,7 @@ public class Activator implements BundleActivator {
 
 			temperatureserviceReference = bundleContext.getServiceReference(TemperatureConvertManager.class.getName());
 			TemperatureConvertManager temperatureConvert = (TemperatureConvertManager) bundleContext.getService(temperatureserviceReference);
-
-//			UnitConvertor window = new UnitConvertor(lenghtConvert, timeConvert, weightConvert, temperatureConvert);
-//			window.frame.setVisible(true);
-//			
+		
 			MainMenu mainWindow = new MainMenu(lenghtConvert, timeConvert, weightConvert, temperatureConvert);
 			mainWindow.frame.setVisible(true);
 

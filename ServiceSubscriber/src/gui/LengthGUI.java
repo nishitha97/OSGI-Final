@@ -88,8 +88,14 @@ public class LengthGUI {
 		String toUnit = ((ComboItem)cmbTo.getSelectedItem()).getValue();
 		String FromUnit = ((ComboItem)cmbFrom.getSelectedItem()).getValue();
 		
+		try {
 		Double result =  lengthConvert.getResult(FromUnit, toUnit, Double.parseDouble(txtFromValue.getText()));
 		lblToValue.setText(result.toString());
+		}catch(NumberFormatException e) {
+			lblToValue.setText("Please enter a valid number !");
+		}
+	
+		
 	}
 	
 	public void setValuesToCmboBoxes() {

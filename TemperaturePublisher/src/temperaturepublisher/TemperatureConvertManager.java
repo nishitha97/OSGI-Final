@@ -21,13 +21,13 @@ public class TemperatureConvertManager {
 
 	public final static HashMap<String, temperatureType> map = new HashMap<String, temperatureType>();
 
-	 public static void main(String[] args) {
-	
-		 TemperatureConvertManager LM = TemperatureConvertManager.getInstance();
-	 System.out.println(LM.getResult(StringConstTemperature.kelvin,
-			 StringConstTemperature.celcius, 1));
-	
-	 }
+//	 public static void main(String[] args) {
+//	
+//		 TemperatureConvertManager LM = TemperatureConvertManager.getInstance();
+//	 System.out.println(LM.getResult(StringConstTemperature.kelvin,
+//			 StringConstTemperature.celcius, 1));
+//	
+//	 }
 
 	public double getResult(String from, String to, double val) {
 

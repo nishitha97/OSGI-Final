@@ -36,7 +36,7 @@ public class MainMenu {
 	 * @param timeConvert 
 	 * @param lenghtConvert 
 	 */
-	public MainMenu(LengthConvertManager lenghtConvert, TimeConvertManager timeConvert, WeightConvertManager weightConvert, TemperatureConvertManager temperatureConvert) {
+	public MainMenu(LengthConvertManager lengthConvertManager, TimeConvertManager timeConvertManager, WeightConvertManager weightConvert, TemperatureConvertManager temperatureConvert) {
 		initialize();
 		this.lengthConvertManager = lengthConvertManager;
 		this.timeConvertManager = timeConvertManager;

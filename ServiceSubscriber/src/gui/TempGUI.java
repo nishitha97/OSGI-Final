@@ -87,9 +87,13 @@ public class TempGUI {
 		String toUnit = ((ComboItem)cmbTo.getSelectedItem()).getValue();
 		String FromUnit = ((ComboItem)cmbFrom.getSelectedItem()).getValue();
 		
+		try {
 		Double result =  temp.getResult(FromUnit, toUnit, Double.parseDouble(txtFromVal.getText()));
 		double s = roundTwoDecimals(result);
 		lblToVal.setText(Double.toString(s));
+		}catch(NumberFormatException e) {
+			lblToVal.setText("Please enter a valid number !");
+		}
 		
 	}
 	public void setValuesToCmboBoxes() {
