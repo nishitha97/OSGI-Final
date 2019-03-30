@@ -17,7 +17,7 @@ import java.awt.event.MouseEvent;
 import java.awt.Font;
 import java.awt.Color;
 
-public class UnitConvertor {
+public class UnitConvertor extends JFrame {
 
 	public JFrame frame;
 	private JTextField txtInput;

@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class WeightConvertManager {
 
+	public StringConstWeight stringConstWeight;
 
 	public static WeightConvertManager getInstance() {
 		

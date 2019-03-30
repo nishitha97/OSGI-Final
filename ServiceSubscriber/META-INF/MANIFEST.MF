@@ -11,3 +11,5 @@ Import-Package: lengthpublisher,
  timepublisher,
  weightpublisher
 Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ miglayout15-swing.jar

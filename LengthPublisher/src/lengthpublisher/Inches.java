@@ -3,7 +3,7 @@ package lengthpublisher;
 public class Inches extends LengthTypeAbs {
 
 	public Inches() {
-		super.per=39.37;
+		super.per=1 / 39.37;
 	}
 
 }
